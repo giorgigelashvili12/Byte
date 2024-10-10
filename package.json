@@ -7,7 +7,7 @@
     "scripts": {
         "dev": "node 'Just the beginning'"
     },
-    "lisence": "Apache Lisence 2.0",
+    "license": "UNLICENSED",
     "aurthor": "Giorgi Gelasvhili",
     "repository": {
         "type": "git",
