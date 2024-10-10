@@ -1,0 +1,19 @@
+{
+    "name": "byte",
+    "type": "module",
+    "version": "01.0.0",
+    "description": "a simple programming course webpage where you can learn nearly anything. (Usage: Practice & My Lessons for me)",
+    "main": "./src/app.js",
+    "scripts": {
+        "dev": "node 'Just the beginning'"
+    },
+    "lisence": "Apache Lisence 2.0",
+    "aurthor": "Giorgi Gelasvhili",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/giorgigelashvili12/Byte"
+    },
+    "bugs": {
+        "url": "https://github.com/giorgigelashvili12/Byte/issues"
+    }
+}
