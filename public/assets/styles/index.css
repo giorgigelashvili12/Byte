@@ -1,0 +1,46 @@
+:root {
+    --main-clr: #0d0f0e; 
+    --av-clr: #87e34a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Noto Sans", sans-serif;
+    background-color: var(--main-clr);
+}
+html {
+    scroll-behavior: smooth;
+}
+
+.main-grid .header {
+    background-color: #000;
+    display: flex;
+    justify-content: space-around;
+    padding: 25px;    
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+.main-grid .header.scrolled {
+    opacity: 1;
+    visibility: visible;
+}
+.main-grid .header img {
+    width: 4%;
+}
+.main-grid .header ul.navbar {
+    display: flex;
+    justify-content: space-around;  
+    align-items: center;
+    gap: 2rem;
+}
+.main-grid .header ul.navbar a {
+    text-decoration: none;
+    color: var(--av-clr);
+}
