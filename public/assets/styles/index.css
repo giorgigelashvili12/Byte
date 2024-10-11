@@ -1,8 +1,10 @@
 :root {
     --main-clr: #0d0f0e; 
     --av-clr: #87e34a;
+    --av-transition: .5;
+    --salad-clr: #93c472;
 }
-
+/* Main styling */
 * {
     margin: 0;
     padding: 0;
@@ -15,7 +17,8 @@ html {
     scroll-behavior: smooth;
 }
 
-.main-grid .header {
+/* Header */
+.main-grid .header, .main-grid .header.scrolling {
     background-color: #000;
     display: flex;
     justify-content: space-around;
@@ -25,14 +28,24 @@ html {
     position: fixed;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.5s ease, visibility 0.5s ease;
+    transition: opacity var(--av-transition) ease, visibility var(--av-transition) ease;
+    top: 0;
+    transition: var(--av-transition);
+}
+.main-grid .header.scrolling-down {
+    top: 0;
+    transition: .5s;
+}
+.main-grid .header.scrolling-up {
+    top: -1000px;
+    transition: 1s;
 }
 .main-grid .header.scrolled {
     opacity: 1;
     visibility: visible;
 }
 .main-grid .header img {
-    width: 4%;
+    width: 30%;
 }
 .main-grid .header ul.navbar {
     display: flex;
@@ -43,4 +56,51 @@ html {
 .main-grid .header ul.navbar a {
     text-decoration: none;
     color: var(--av-clr);
+    transition: var(--av-transition);
+    border-bottom: 1px solid #000;
+}
+.main-grid .header ul.navbar a:hover {
+    border-bottom: 1px solid var(--av-clr);
+    transition: var(--av-transition);
+}
+
+/* Banner */
+.main-grid .banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--salad-clr);
+    gap: 30%;
+    height: 90%;
+}
+.main-grid .banner .right img {
+    width: 100%;
+}
+.main-grid .banner .left {
+    padding: 40px;
+}
+.main-grid .banner .left .content-tra {
+    opacity: 0;
+    transition: all 1.5s;
+}
+.main-grid .banner .left h1 {
+    font-size: 2.5rem;
+}
+.main-grid .banner .left .bar {
+    display: flex;
+    gap: 2rem;
+    margin-top: 40px;
+}
+.main-grid .banner .left .bar a {
+    background-color: var(--main-clr);
+    color: var(--salad-clr);
+    padding: 10px 15px;
+    text-decoration: none;
+    border: 2px solid var(--main-clr);
+    transition: all .7s;
+}
+.main-grid .banner .left .bar a:hover {
+    border: 2px solid --main-clr;
+    color: var(--main-clr);
+    background: none;
 }
